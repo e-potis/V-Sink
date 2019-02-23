@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# PlanAhead v14.1
+# Build 179419 by xbuild on Thu Apr 26 11:41:35 MDT 2012
+# Start of session at: Sun Mar 31 16:57:28 2013
+# Process ID: 2300
+# Log file: C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/planAhead_run_1/planAhead.log
+# Journal file: C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Device-36] Loading parts and site information from C:/Xilinx/14.1/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.1/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.1/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source {C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/pa.fromNetlist.tcl}
+# create_project -name papillio2812 -dir "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/planAhead_run_2" -part xc3s250evq100-4
+Parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\verilog.xml].
+Finished parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\verilog.xml].
+Parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\vhdl.xml].
+Finished parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\vhdl.xml].
+Parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\ucf.xml].
+Finished parsing template File [C:/Xilinx/14.1/ISE_DS/ISE\data\projnav\templates\ucf.xml].
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/main.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812} {ipcore_dir} }
+# set_property target_constrs_file "BPC3003_2.03+.ucf" [current_fileset -constrset]
+Adding file 'C:\Documents and Settings\Owner\My Documents\Dropbox\Johnny5\papillio2812\BPC3003_2.03+.ucf' to fileset 'constrs_1'
+# add_files [list {BPC3003_2.03+.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s250evq100-4
+Release 14.1 - ngc2edif P.15xf (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Release 14.1 - ngc2edif P.15xf (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design main.ngc ...
+WARNING:NetListWriters:298 - No output is written to main.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file main.edif ...
+ngc2edif: Total memory usage is 43344 kilobytes
+
+Parsing EDIF File [.\planAhead_run_2\papillio2812.data\cache\main_ngc_5d5bc78c.edif]
+ERROR: 'rdi::source' was cancelled
+exit
+INFO: [Common-206] Exiting PlanAhead...
+INFO: [Common-83] Releasing license: PlanAhead

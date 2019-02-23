@@ -1,0 +1,13 @@
+[Inputs]
+clk
+inpt
+fifo_full
+fifo_empty
+[Outputs]
+fifo_clk
+fifo_reset
+we
+re
+led_out
+tx
+[BiDir]

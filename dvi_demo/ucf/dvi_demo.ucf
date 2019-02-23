@@ -1,0 +1,112 @@
+###########################################
+# Setting VCCAUX for different SP601 board
+###########################################
+CONFIG VCCAUX = 3.3;
+
+#
+# Constraint for RX0
+#
+NET "dvi_rx0/rxclk" TNM_NET = DVI_CLOCK0;
+TIMESPEC TS_DVI_CLOCK0 = PERIOD "DVI_CLOCK0" 100 MHz HIGH 50%;
+
+#
+# Constraint for RX1
+#
+NET "dvi_rx1/rxclk" TNM_NET = DVI_CLOCK1;
+TIMESPEC TS_DVI_CLOCK1 = PERIOD "DVI_CLOCK1" 100 MHz HIGH 50%;
+
+#
+# Multi-cycle paths for TX0
+#
+TIMEGRP "bramgrp_0" = RAMS(dvi_tx0/pixel2x/dataint<*>);
+TIMEGRP "fddbgrp_0" = FFS(dvi_tx0/pixel2x/db<*>);
+TIMEGRP "bramra_0"  = FFS(dvi_tx0/pixel2x/ra<*>);
+
+TIMESPEC "TS_ramdo_0" = FROM "bramgrp_0" TO "fddbgrp_0" TS_DVI_CLOCK0;
+TIMESPEC "TS_ramra_0" = FROM "bramra_0"  TO "fddbgrp_0" TS_DVI_CLOCK0;
+
+#
+# Multi-cycle paths for TX1
+#
+TIMEGRP "bramgrp_1" = RAMS(dvi_tx1/pixel2x/dataint<*>);
+TIMEGRP "fddbgrp_1" = FFS(dvi_tx1/pixel2x/db<*>);
+TIMEGRP "bramra_1"  = FFS(dvi_tx1/pixel2x/ra<*>);
+
+TIMESPEC "TS_ramdo_1" = FROM "bramgrp_1" TO "fddbgrp_1" TS_DVI_CLOCK1;
+TIMESPEC "TS_ramra_1" = FROM "bramra_1"  TO "fddbgrp_1" TS_DVI_CLOCK1;
+
+##############################################################################
+# SYSCLK Input
+##############################################################################
+NET "clk100"        LOC = "L15" | IOSTANDARD = LVCMOS33 | PERIOD = 100 MHz;
+
+##############################################################################
+# Mechanical Switches (SW)
+##############################################################################
+NET "SW<0>"         LOC = "A10" | IOSTANDARD = LVCMOS33 ;
+NET "SW<1>"         LOC = "D14" | IOSTANDARD = LVCMOS33 ;
+#NET "SW<2>"         LOC = "C14" | IOSTANDARD = LVCMOS33 ;
+#NET "SW<3>"         LOC = "P15" | IOSTANDARD = LVCMOS33 ;
+
+############################################
+# TMDS pairs for Atlys top OUT: J2 - Bank 0
+############################################
+NET "TX0_TMDS(3)"  	LOC = "B6" |IOSTANDARD = TMDS_33 ; # Clock	
+NET "TX0_TMDSB(3)"  LOC = "A6" |IOSTANDARD = TMDS_33 ;
+NET "TX0_TMDS(2)"  	LOC = "B8" |IOSTANDARD = TMDS_33 ; # Red 	
+NET "TX0_TMDSB(2)"  LOC = "A8" |IOSTANDARD = TMDS_33 ;
+NET "TX0_TMDS(1)"  	LOC = "C7" |IOSTANDARD = TMDS_33 ; # Green	
+NET "TX0_TMDSB(1)"  LOC = "A7" |IOSTANDARD = TMDS_33 ;
+NET "TX0_TMDS(0)"  	LOC = "D8" |IOSTANDARD = TMDS_33 ; # Blue
+NET "TX0_TMDSB(0)"  LOC = "C8" |IOSTANDARD = TMDS_33 ;
+
+##############################################
+# TMDS pairs for Atlys top OUT: JA - Bank 2
+# Use TML_33 to add output series termination
+##############################################
+NET "TX1_TMDS(3)"  	LOC = "T9" |IOSTANDARD = TML_33; #TMDS_33 ; ## Clock	
+NET "TX1_TMDSB(3)"  LOC = "V9" |IOSTANDARD = TML_33; #TMDS_33 ; #
+NET "TX1_TMDS(2)"  	LOC = "N5" |IOSTANDARD = TML_33; #TMDS_33 ; ## Red 	
+NET "TX1_TMDSB(2)"  LOC = "P6" |IOSTANDARD = TML_33; #TMDS_33 ; #
+NET "TX1_TMDS(1)"  	LOC = "T4" |IOSTANDARD = TML_33; #TMDS_33 ; ## Green	
+NET "TX1_TMDSB(1)"  LOC = "V4" |IOSTANDARD = TML_33; #TMDS_33 ; #
+NET "TX1_TMDS(0)"  	LOC = "R3" |IOSTANDARD = TML_33; #TMDS_33 ; ## Blue
+NET "TX1_TMDSB(0)"  LOC = "T3" |IOSTANDARD = TML_33; #TMDS_33 ; #
+
+##################################################
+# TMDS pairs for Atlys IN (FPGA Bank 1): J3
+##################################################
+NET "RX1_TMDS(3)"  	LOC = "H17" |IOSTANDARD = TMDS_33 ; # CLK
+NET "RX1_TMDSB(3)"  LOC = "H18" |IOSTANDARD = TMDS_33 ;
+NET "RX1_TMDS(2)"  	LOC = "J16" |IOSTANDARD = TMDS_33 ; # Red
+NET "RX1_TMDSB(2)"  LOC = "J18" |IOSTANDARD = TMDS_33 ;
+NET "RX1_TMDS(1)"  	LOC = "L17" |IOSTANDARD = TMDS_33 ; # Green	
+NET "RX1_TMDSB(1)"  LOC = "L18" |IOSTANDARD = TMDS_33 ;
+NET "RX1_TMDS(0)"  	LOC = "K17" |IOSTANDARD = TMDS_33 ; # Blue	
+NET "RX1_TMDSB(0)"  LOC = "K18" |IOSTANDARD = TMDS_33 ;
+
+##############################################
+# TMDS pairs for Atlys IN (FPGA Bank 0): J1
+##############################################
+NET "RX0_TMDS(3)"  	LOC = "D11" |IOSTANDARD = TMDS_33 ; # CLK
+NET "RX0_TMDSB(3)"  LOC = "C11" |IOSTANDARD = TMDS_33 ;
+NET "RX0_TMDS(2)"  	LOC = "B12" |IOSTANDARD = TMDS_33 ; # Red
+NET "RX0_TMDSB(2)"  LOC = "A12" |IOSTANDARD = TMDS_33 ;
+NET "RX0_TMDS(1)"  	LOC = "B11" |IOSTANDARD = TMDS_33 ; # Green	
+NET "RX0_TMDSB(1)"  LOC = "A11" |IOSTANDARD = TMDS_33 ;
+NET "RX0_TMDS(0)"  	LOC = "G9"  |IOSTANDARD = TMDS_33 ; # Blue	
+NET "RX0_TMDSB(0)"  LOC = "F9"  |IOSTANDARD = TMDS_33 ;
+
+
+########################################
+# Reset button and LEDs and Mechanical Switches (SW)
+########################################
+NET "rstbtn_n" LOC = "T15" | IOSTANDARD = LVCMOS33;
+NET "LED<0>"   LOC = "U18" | IOSTANDARD = LVCMOS33;
+NET "LED<1>"   LOC = "M14" | IOSTANDARD = LVCMOS33;
+NET "LED<2>"   LOC = "N14" | IOSTANDARD = LVCMOS33;
+NET "LED<3>"   LOC = "L14" | IOSTANDARD = LVCMOS33;
+NET "LED<4>"   LOC = "M13" | IOSTANDARD = LVCMOS33;
+NET "LED<5>"   LOC = "D4"  | IOSTANDARD = LVCMOS33;
+NET "LED<6>"   LOC = "P16" | IOSTANDARD = LVCMOS33;
+NET "LED<7>"   LOC = "N12" | IOSTANDARD = LVCMOS33;

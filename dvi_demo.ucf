@@ -1,0 +1,148 @@
+###########################################
+# Setting VCCAUX for different SP601 board
+###########################################
+CONFIG VCCAUX = 3.3;
+
+#
+# Constraint for RX0
+#
+NET "dvi_rx0/rxclk" TNM_NET = DVI_CLOCK0;
+TIMESPEC TS_DVI_CLOCK0 = PERIOD "DVI_CLOCK0" 100 MHz HIGH 50%;
+
+#
+# Constraint for RX1
+#
+NET "dvi_rx1/rxclk" TNM_NET = DVI_CLOCK1;
+TIMESPEC TS_DVI_CLOCK1 = PERIOD "DVI_CLOCK1" 100 MHz HIGH 50%;
+
+#
+# Multi-cycle paths for TX0
+#
+TIMEGRP "bramgrp_0" = RAMS(dvi_tx0/pixel2x/dataint<*>);
+TIMEGRP "fddbgrp_0" = FFS(dvi_tx0/pixel2x/db<*>);
+TIMEGRP "bramra_0"  = FFS(dvi_tx0/pixel2x/ra<*>);
+
+TIMESPEC "TS_ramdo_0" = FROM "bramgrp_0" TO "fddbgrp_0" TS_DVI_CLOCK0;
+TIMESPEC "TS_ramra_0" = FROM "bramra_0"  TO "fddbgrp_0" TS_DVI_CLOCK0;
+
+#
+# Multi-cycle paths for TX1
+#
+TIMEGRP "bramgrp_1" = RAMS(dvi_tx1/pixel2x/dataint<*>);
+TIMEGRP "fddbgrp_1" = FFS(dvi_tx1/pixel2x/db<*>);
+TIMEGRP "bramra_1"  = FFS(dvi_tx1/pixel2x/ra<*>);
+
+TIMESPEC "TS_ramdo_1" = FROM "bramgrp_1" TO "fddbgrp_1" TS_DVI_CLOCK1;
+TIMESPEC "TS_ramra_1" = FROM "bramra_1"  TO "fddbgrp_1" TS_DVI_CLOCK1;
+
+##############################################################################
+# SYSCLK Input
+##############################################################################
+NET "clk100"        LOC = "L15" | IOSTANDARD = LVCMOS33 | PERIOD = 100 MHz;
+
+##############################################################################
+# Mechanical Switches (SW)
+##############################################################################
+NET "SW<0>"         LOC = "A10" | IOSTANDARD = LVCMOS33 ;
+NET "SW<1>"         LOC = "D14" | IOSTANDARD = LVCMOS33 ;
+NET "SW<2>"         LOC = "C14" | IOSTANDARD = LVCMOS33 ;
+#NET "SW<3>"         LOC = "P15" | IOSTANDARD = LVCMOS33 ;
+
+############################################
+# TMDS pairs for Atlys top OUT: J2 - Bank 0
+############################################
+NET "TX0_TMDS(3)"  	LOC = "B6" |IOSTANDARD = TMDS_33 ; # Clock	
+NET "TX0_TMDSB(3)"  LOC = "A6" |IOSTANDARD = TMDS_33 ;
+NET "TX0_TMDS(2)"  	LOC = "B8" |IOSTANDARD = TMDS_33 ; # Red 	
+NET "TX0_TMDSB(2)"  LOC = "A8" |IOSTANDARD = TMDS_33 ;
+NET "TX0_TMDS(1)"  	LOC = "C7" |IOSTANDARD = TMDS_33 ; # Green	
+NET "TX0_TMDSB(1)"  LOC = "A7" |IOSTANDARD = TMDS_33 ;
+NET "TX0_TMDS(0)"  	LOC = "D8" |IOSTANDARD = TMDS_33 ; # Blue
+NET "TX0_TMDSB(0)"  LOC = "C8" |IOSTANDARD = TMDS_33 ;
+
+##############################################
+# TMDS pairs for Atlys top OUT: JA - Bank 2
+# Use TML_33 to add output series termination
+##############################################
+#NET "TX1_TMDS(3)"  	LOC = "T9" |IOSTANDARD = TML_33; #TMDS_33 ; ## Clock	
+#NET "TX1_TMDSB(3)"  LOC = "V9" |IOSTANDARD = TML_33; #TMDS_33 ; #
+#NET "TX1_TMDS(2)"  	LOC = "N5" |IOSTANDARD = TML_33; #TMDS_33 ; ## Red 	
+#NET "TX1_TMDSB(2)"  LOC = "P6" |IOSTANDARD = TML_33; #TMDS_33 ; #
+#NET "TX1_TMDS(1)"  	LOC = "T4" |IOSTANDARD = TML_33; #TMDS_33 ; ## Green	
+#NET "TX1_TMDSB(1)"  LOC = "V4" |IOSTANDARD = TML_33; #TMDS_33 ; #
+#NET "TX1_TMDS(0)"  	LOC = "R3" |IOSTANDARD = TML_33; #TMDS_33 ; ## Blue
+#NET "TX1_TMDSB(0)"  LOC = "T3" |IOSTANDARD = TML_33; #TMDS_33 ; #
+
+##################################################
+# TMDS pairs for Atlys IN (FPGA Bank 1): J3
+##################################################
+NET "RX1_TMDS(3)"  	LOC = "H17" |IOSTANDARD = TMDS_33 ; # CLK
+NET "RX1_TMDSB(3)"  LOC = "H18" |IOSTANDARD = TMDS_33 ;
+NET "RX1_TMDS(2)"  	LOC = "J16" |IOSTANDARD = TMDS_33 ; # Red
+NET "RX1_TMDSB(2)"  LOC = "J18" |IOSTANDARD = TMDS_33 ;
+NET "RX1_TMDS(1)"  	LOC = "L17" |IOSTANDARD = TMDS_33 ; # Green	
+NET "RX1_TMDSB(1)"  LOC = "L18" |IOSTANDARD = TMDS_33 ;
+NET "RX1_TMDS(0)"  	LOC = "K17" |IOSTANDARD = TMDS_33 ; # Blue	
+NET "RX1_TMDSB(0)"  LOC = "K18" |IOSTANDARD = TMDS_33 ;
+NET "RX1_SCL"  LOC = "M16"; # Bank = 1, Pin name = IO_L47P_FWE_B_M1DQ0, Sch name = TMDS-RX-SCL
+NET "RX1_SDA"  LOC = "M18"; # Bank = 1, Pin name = IO_L47N_LDC_M1DQ1,   Sch name = TMDS-RX-SDA
+
+
+##############################################
+# TMDS pairs for Atlys IN (FPGA Bank 0): J1
+##############################################
+NET "RX0_TMDS(3)"  	LOC = "D11" |IOSTANDARD = TMDS_33 ; # CLK
+NET "RX0_TMDSB(3)"  LOC = "C11" |IOSTANDARD = TMDS_33 ;
+NET "RX0_TMDS(2)"  	LOC = "B12" |IOSTANDARD = TMDS_33 ; # Red
+NET "RX0_TMDSB(2)"  LOC = "A12" |IOSTANDARD = TMDS_33 ;
+NET "RX0_TMDS(1)"  	LOC = "B11" |IOSTANDARD = TMDS_33 ; # Green	
+NET "RX0_TMDSB(1)"  LOC = "A11" |IOSTANDARD = TMDS_33 ;
+NET "RX0_TMDS(0)"  	LOC = "G9"  |IOSTANDARD = TMDS_33 ; # Blue	
+NET "RX0_TMDSB(0)"  LOC = "F9"  |IOSTANDARD = TMDS_33 ;
+
+########################################
+# Reset button and LEDs and Mechanical Switches (SW)
+########################################
+NET "rstbtn_n" LOC = "T15" ;#| IOSTANDARD = LVCMOS33;
+NET "LED<0>"   LOC = "U18" ;#| IOSTANDARD = LVCMOS33;
+NET "LED<1>"   LOC = "M14" ;#| IOSTANDARD = LVCMOS33;
+NET "LED<2>"   LOC = "N14" ;#| IOSTANDARD = LVCMOS33;
+NET "LED<3>"   LOC = "L14" ;#| IOSTANDARD = LVCMOS33;
+NET "LED<4>"   LOC = "M13" ;#| IOSTANDARD = LVCMOS33;
+NET "LED<5>"   LOC = "D4"  | IOSTANDARD = LVCMOS33;
+#NET "LED<6>"   LOC = "P16" | IOSTANDARD = LVCMOS33;
+#NET "LED<7>"   LOC = "N12" | IOSTANDARD = LVCMOS33;
+
+# onboard AUX connectors
+ NET "serial_out<0>"  LOC = "U16"; # Bank = 2,  Pin name = IO_L2P_CMPCLK,        	Sch name = EXP-IO1_P
+ NET "serial_out<1>"  LOC = "U15"; # Bank = 2,  Pin name = *IO_L5P,        		Sch name = EXP-IO2_P
+ NET "serial_out<2>"  LOC = "U13"; # Bank = 2,  Pin name = IO_L14P_D11,        	Sch name = EXP-IO3_P
+ NET "serial_out<3>"  LOC = "M11"; # Bank = 2,  Pin name = *IO_L15P,        		Sch name = EXP-IO4_P
+ NET "serial_out<4>"  LOC = "R11"; # Bank = 2,  Pin name = IO_L16P,        		Sch name = EXP-IO5_P
+ NET "serial_out<5>"  LOC = "T12"; # Bank = 2,  Pin name = *IO_L19P,        		Sch name = EXP-IO6_P
+ NET "serial_out<6>"  LOC = "N10"; # Bank = 2,  Pin name = *IO_L20P,        		Sch name = EXP-IO7_P
+ NET "serial_out<7>"  LOC = "M10"; # Bank = 2,  Pin name = *IO_L22P,        		Sch name = EXP-IO8_P
+ NET "serial_out<8>"  LOC = "U11"; # Bank = 2,  Pin name = IO_L23P,        		Sch name = EXP-IO9_P
+ NET "serial_out<9>"  LOC = "R10"; # Bank = 2,  Pin name = IO_L29P_GCLK3,        	Sch name = EXP-IO10_P
+ NET "serial_out<10>" LOC = "U10"; # Bank = 2,  Pin name = IO_L30P_GCLK1_D13,      Sch name = EXP-IO11_P
+ NET "serial_out<11>" LOC = "R8";  # Bank = 2,  Pin name = IO_L31P_GCLK31_D14,     Sch name = EXP-IO12_P
+ NET "serial_out<12>" LOC = "M8";  # Bank = 2,  Pin name = *IO_L40P,        		Sch name = EXP-IO13_P
+ NET "serial_out<13>" LOC = "U8";  # Bank = 2,  Pin name = IO_L41P,        		Sch name = EXP-IO14_P
+ NET "serial_out<14>" LOC = "U7";  # Bank = 2,  Pin name = IO_L43P,        		Sch name = EXP-IO15_P
+ NET "serial_out<15>" LOC = "N7";  # Bank = 2,  Pin name = *IO_L44P,        		Sch name = EXP-IO16_P
+ NET "serial_out<16>" LOC = "T6";  # Bank = 2,  Pin name = IO_L45P,        		Sch name = EXP-IO17_P
+ NET "serial_out<17>" LOC = "R7";  # Bank = 2,  Pin name = IO_L46P,        		Sch name = EXP-IO18_P
+ NET "serial_out<18>" LOC = "N6";  # Bank = 2,  Pin name = *IO_L47P,        		Sch name = EXP-IO19_P
+ NET "serial_out<19>" LOC = "U5";  # Bank = 2,  Pin name = IO_49P_D3,        		Sch name = EXP-IO20_P
+ NET "serial_out<20>"  LOC = "V16"; # Bank = 2,  Pin name = IO_L2N_CMPMOSI,        	Sch name = EXP-IO1_N
+ NET "serial_out<21>"  LOC = "V15"; # Bank = 2,  Pin name = *IO_L5N,        		Sch name = EXP-IO2_N
+ NET "serial_out<22>"  LOC = "V13"; # Bank = 2,  Pin name = IO_L14N_D12,        	Sch name = EXP-IO3_N
+ NET "serial_out<23>"  LOC = "N11"; # Bank = 2,  Pin name = *IO_L15N,        		Sch name = EXP-IO4_N
+ NET "serial_out<24>"  LOC = "T11"; # Bank = 2,  Pin name = IO_L16N_VREF,        	Sch name = EXP-IO5_N
+ NET "serial_out<25>"  LOC = "V12"; # Bank = 2,  Pin name = *IO_L19N,        		Sch name = EXP-IO6_N
+ NET "serial_out<26>"  LOC = "P11"; # Bank = 2,  Pin name = *IO_L20N,        		Sch name = EXP-IO7_N
+ NET "serial_out<27>"  LOC = "N9";  # Bank = 2,  Pin name = *IO_L22N,        		Sch name = EXP-IO8_N
+ NET "serial_out<28>"  LOC = "V11"; # Bank = 2,  Pin name = IO_L23N,        		Sch name = EXP-IO9_N
+ NET "serial_out<29>"  LOC = "T10"; # Bank = 2,  Pin name = IO_L29N_GCLK2,          Sch name = EXP-IO10_N
+ NET "serial_out<30>" LOC = "V10"; # Bank = 2,  Pin name = IO_L30N_GCLK0_USERCCLK, Sch name = EXP-IO11_N
+ NET "serial_out<31>" LOC = "T8";  # Bank = 2,  Pin name = IO_L31N_GCLK30_D15,     Sch name = EXP-IO12_N

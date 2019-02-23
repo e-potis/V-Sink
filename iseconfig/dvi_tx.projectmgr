@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="dvi_tx" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx_0.06|dvi_demo|rtl|dvi_demo.v/dvi_mux_0 - dvi_mux - Behavioral</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx_0.06|dvi_demo|rtl|dvi_demo.v/dvi_rx0 - dvi_decoder</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx_0.06|dvi_demo|rtl|dvi_demo.v/dvi_rx1 - dvi_decoder</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx_0.06|dvi_demo|rtl|dvi_demo.v/dvi_tx0 - dvi_encoder_top</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx_0.06|dvi_demo|rtl|dvi_demo.v/dvi_tx1 - dvi_encoder_top</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx_0.06|dvi_demo|rtl|dvi_demo.v/test_video - gen_test_video - Behavioral</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx_0.07|dvi_demo|rtl|dvi_demo.v/dvi_mux_0 - dvi_mux - Behavioral</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx_0.07|dvi_demo|rtl|dvi_demo.v/dvi_rx0 - dvi_decoder</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx_0.07|dvi_demo|rtl|dvi_demo.v/dvi_rx1 - dvi_decoder</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx_0.07|dvi_demo|rtl|dvi_demo.v/dvi_tx0 - dvi_encoder_top</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx_0.07|dvi_demo|rtl|dvi_demo.v/dvi_tx1 - dvi_encoder_top</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx_0.07|dvi_demo|rtl|dvi_demo.v/test_video - gen_test_video - Behavioral</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx|dvi_demo|rtl|dvi_demo.v/dvi_mux_0 - dvi_mux - Behavioral</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx|dvi_demo|rtl|dvi_demo.v/dvi_rx0 - dvi_decoder</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx|dvi_demo|rtl|dvi_demo.v/dvi_rx1 - dvi_decoder</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx|dvi_demo|rtl|dvi_demo.v/dvi_tx0 - dvi_encoder_top</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx|dvi_demo|rtl|dvi_demo.v/dvi_tx1 - dvi_encoder_top</ClosedNode>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx|dvi_demo|rtl|dvi_demo.v/test_video - gen_test_video - Behavioral</ClosedNode>
+         <ClosedNode>/dvi_encoder_top C:|Users|Stacey|Dropbox|work|george|dvi_tx|dvi_demo|rtl|tx|dvi_encoder_top.v</ClosedNode>
+         <ClosedNode>/dvi_mux - Behavioral C:|Users|Stacey|Dropbox|work|george|dvi_tx|dvi_mux.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>dvi_demo (C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.07/dvi_demo/rtl/dvi_demo.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000188000000020000000000000000000000000200000064ffffffff000000810000000300000002000001880000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>dvi_demo (C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.07/dvi_demo/rtl/dvi_demo.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Generate Programming File</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000180000000010000000100000000000000000000000064ffffffff000000810000000000000001000001800000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Generate Programming File</CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002a1000000040101000100000000000000000000000064ffffffff000000810000000000000004000000a000000001000000000000004a0000000100000000000000660000000100000000000001510000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>chnlbond.v</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000109000000010001000100000000000000000000000064ffffffff000000810000000000000001000001090000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/dvi_demo C:|Users|Stacey|Dropbox|work|george|dvi_tx|dvi_demo|rtl|dvi_demo.v</ClosedNode>
+         <ClosedNode>/dvi_encoder_top C:|Users|Stacey|Dropbox|work|george|dvi_tx|dvi_demo|rtl|tx|dvi_encoder_top.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Unassigned User Library Modules</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000fb000000020000000000000000000000000200000064ffffffff000000810000000300000002000000fb0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000190000000010000000100000000000000000000000064ffffffff000000810000000000000001000001900000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000190000000010000000100000000000000000000000064ffffffff000000810000000000000001000001900000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000190000000010000000100000000000000000000000064ffffffff000000810000000000000001000001900000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <SourceProcessView>000000ff000000000000000200000109000000c401000000040100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000190000000010000000100000000000000000000000064ffffffff000000810000000000000001000001900000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+</Project>

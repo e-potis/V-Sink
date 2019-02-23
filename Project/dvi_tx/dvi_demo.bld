@@ -1,0 +1,147 @@
+Release 14.3 ngdbuild P.40xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.3\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ../../ipcore_dir -nt timestamp -uc
+C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.09/dvi_demo.ucf -p
+xc6slx45-csg324-3 dvi_demo.ngc dvi_demo.ngd
+
+Reading NGO file
+"C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.09/Project/dvi_tx/dvi_demo.ngc"
+...
+Loading design module "../../ipcore_dir/RAM.ngc"...
+Loading design module "../../ipcore_dir/driver_fifo.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.09/dvi_demo.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'DVI_CLOCK0', used in period specification
+   'TS_DVI_CLOCK0', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT1: <TIMESPEC TS_rx0_pllclk1 = PERIOD "rx0_pllclk1" TS_DVI_CLOCK0 HIGH
+   50%>
+
+INFO:ConstraintSystem:178 - TNM 'DVI_CLOCK0', used in period specification
+   'TS_DVI_CLOCK0', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT0: <TIMESPEC TS_dvi_rx0_pllclk0 = PERIOD "dvi_rx0_pllclk0"
+   TS_DVI_CLOCK0 * 10 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'DVI_CLOCK0', used in period specification
+   'TS_DVI_CLOCK0', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT2: <TIMESPEC TS_dvi_rx0_pllclk2 = PERIOD "dvi_rx0_pllclk2"
+   TS_DVI_CLOCK0 * 2 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'DVI_CLOCK1', used in period specification
+   'TS_DVI_CLOCK1', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT1: <TIMESPEC TS_rx1_pllclk1 = PERIOD "rx1_pllclk1" TS_DVI_CLOCK1 HIGH
+   50%>
+
+INFO:ConstraintSystem:178 - TNM 'DVI_CLOCK1', used in period specification
+   'TS_DVI_CLOCK1', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT0: <TIMESPEC TS_dvi_rx1_pllclk0 = PERIOD "dvi_rx1_pllclk0"
+   TS_DVI_CLOCK1 * 10 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'DVI_CLOCK1', used in period specification
+   'TS_DVI_CLOCK1', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT2: <TIMESPEC TS_dvi_rx1_pllclk2 = PERIOD "dvi_rx1_pllclk2"
+   TS_DVI_CLOCK1 * 2 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'rx0_pllclk1', used in period specification
+   'TS_rx0_pllclk1', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT0: <TIMESPEC TS_tx0_pllclk0 = PERIOD "tx0_pllclk0" TS_rx0_pllclk1 * 10
+   HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'rx0_pllclk1', used in period specification
+   'TS_rx0_pllclk1', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT2: <TIMESPEC TS_tx0_pllclk2 = PERIOD "tx0_pllclk2" TS_rx0_pllclk1 * 2
+   HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'rx0_pllclk1', used in period specification
+   'TS_rx0_pllclk1', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT0: <TIMESPEC TS_tx1_pllclk0 = PERIOD "tx1_pllclk0" TS_rx0_pllclk1 * 10
+   HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'rx0_pllclk1', used in period specification
+   'TS_rx0_pllclk1', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT2: <TIMESPEC TS_tx1_pllclk2 = PERIOD "tx1_pllclk2" TS_rx0_pllclk1 * 2
+   HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'rx1_pllclk1', used in period specification
+   'TS_rx1_pllclk1', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT0: <TIMESPEC TS_tx0_pllclk0_0 = PERIOD "tx0_pllclk0_0" TS_rx1_pllclk1 *
+   10 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'rx1_pllclk1', used in period specification
+   'TS_rx1_pllclk1', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT2: <TIMESPEC TS_tx0_pllclk2_0 = PERIOD "tx0_pllclk2_0" TS_rx1_pllclk1 *
+   2 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'rx1_pllclk1', used in period specification
+   'TS_rx1_pllclk1', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT0: <TIMESPEC TS_tx1_pllclk0_0 = PERIOD "tx1_pllclk0_0" TS_rx1_pllclk1 *
+   10 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'rx1_pllclk1', used in period specification
+   'TS_rx1_pllclk1', was traced into PLL_ADV instance PLL_ADV. The following new
+   TNM groups and period specifications were generated at the PLL_ADV output(s):
+    
+   CLKOUT2: <TIMESPEC TS_tx1_pllclk2_0 = PERIOD "tx1_pllclk2_0" TS_rx1_pllclk1 *
+   2 HIGH 50%>
+
+INFO:ConstraintSystem - The Period constraint <PERIOD = 100 MHz;>
+   [C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.09/dvi_demo.ucf(41)], is
+   specified using the Net Period method which is not recommended. Please use
+   the Timespec PERIOD method.
+
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:440 - FF primitive 'synchro_sws_2/use_fdc.fdb' has unconnected
+   output pin
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   1
+
+Total memory usage is 253264 kilobytes
+
+Writing NGD file "dvi_demo.ngd" ...
+Total REAL time to NGDBUILD completion:  26 sec
+Total CPU time to NGDBUILD completion:   22 sec
+
+Writing NGDBUILD log file "dvi_demo.bld"...

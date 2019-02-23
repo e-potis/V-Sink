@@ -1,0 +1,6 @@
+vhdl work "C:\papillio2812\uart_rx.vhd"
+vhdl work "C:\papillio2812\LED_TX.vhd"
+vhdl work "C:\papillio2812\ipcore_dir\rx_fifo.vhd"
+vhdl work "C:\papillio2812\clk_mult.vhd"
+vhdl work "C:\papillio2812\baud_gen.vhd"
+vhdl work "C:\papillio2812\main.vhf"

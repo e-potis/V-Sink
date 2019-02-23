@@ -1,0 +1,652 @@
+Release 14.1 - xst P.15xf (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s250e-4-vq100
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/baud_gen.vhd" in Library work.
+Architecture behavioral of Entity baud_gen is up to date.
+Compiling vhdl file "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/uart_rx.vhd" in Library work.
+Architecture low_level_definition of Entity uart_rx is up to date.
+Compiling vhdl file "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/clk_mult.vhd" in Library work.
+Entity <clk_mult> compiled.
+Entity <clk_mult> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/ipcore_dir/rx_fifo.vhd" in Library work.
+Architecture rx_fifo_a of Entity rx_fifo is up to date.
+Compiling vhdl file "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/LED_TX.vhd" in Library work.
+Entity <led_tx> compiled.
+Entity <led_tx> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/main.vhf" in Library work.
+Entity <main> compiled.
+Entity <main> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <main> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <baud_gen> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <uart_rx> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <clk_mult> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <LED_TX> in library <work> (architecture <behavioral>).
+
+WARNING:Xst:2591 - "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/uart_rx.vhd" line 290: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/uart_rx.vhd" line 213: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/uart_rx.vhd" line 195: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/uart_rx.vhd" line 100: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <main> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/main.vhf" line 113: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'clk_mult'.
+WARNING:Xst:753 - "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/main.vhf" line 113: Unconnected output port 'CLK0_OUT' of component 'clk_mult'.
+WARNING:Xst:2211 - "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/main.vhf" line 123: Instantiating black box module <rx_fifo>.
+Entity <main> analyzed. Unit <main> generated.
+
+Analyzing Entity <baud_gen> in library <work> (Architecture <behavioral>).
+Entity <baud_gen> analyzed. Unit <baud_gen> generated.
+
+Analyzing Entity <uart_rx> in library <work> (Architecture <low_level_definition>).
+    Set user-defined property "INIT =  0" for instance <sync_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <stop_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[0].lsbs.delay15_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[0].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[1].lsbs.delay15_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[1].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[2].lsbs.delay15_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[2].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[3].lsbs.delay15_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[3].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[4].lsbs.delay15_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[4].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[5].lsbs.delay15_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[5].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[6].lsbs.delay15_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[6].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[7].msb.delay15_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <data_loop[7].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <start_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <start_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <edge_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <edge_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0040" for instance <valid_lut> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  54" for instance <purge_lut> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <purge_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[0].lsb.delay15_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[0].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[1].msbs.delay16_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[1].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[2].msbs.delay16_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[2].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[3].msbs.delay16_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[3].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[4].msbs.delay16_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[4].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[5].msbs.delay16_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[5].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[6].msbs.delay16_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[6].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[7].msbs.delay16_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[7].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[8].msbs.delay16_srl> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <valid_loop[8].data_reg> in unit <uart_rx>.
+    Set user-defined property "INIT =  8" for instance <strobe_lut> in unit <uart_rx>.
+    Set user-defined property "INIT =  0" for instance <strobe_reg> in unit <uart_rx>.
+Entity <uart_rx> analyzed. Unit <uart_rx> generated.
+
+Analyzing Entity <clk_mult> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <clk_mult>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <clk_mult>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <clk_mult>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <clk_mult>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "CLKFX_MULTIPLY =  3" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "CLKIN_PERIOD =  31.2500000000000000" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <clk_mult>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <clk_mult>.
+Entity <clk_mult> analyzed. Unit <clk_mult> generated.
+
+Analyzing Entity <LED_TX> in library <work> (Architecture <behavioral>).
+Entity <LED_TX> analyzed. Unit <LED_TX> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <baud_gen>.
+    Related source file is "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/baud_gen.vhd".
+    Found 1-bit register for signal <baud>.
+    Found 4-bit comparator less for signal <baud$cmp_lt0000> created at line 32.
+    Found 4-bit up counter for signal <baud_count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <baud_gen> synthesized.
+
+
+Synthesizing Unit <LED_TX>.
+    Related source file is "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/LED_TX.vhd".
+    Register <we> equivalent to <fifo_reset> has been removed
+    Using one-hot encoding for signal <current_st>.
+    Found 1-bit register for signal <fifo_clk>.
+    Found 1-bit register for signal <fifo_reset>.
+    Found 1-bit register for signal <re>.
+    Found 1-bit register for signal <tx>.
+    Found 1-bit register for signal <led_out>.
+    Found 3-bit register for signal <current_st>.
+    Found 7-bit comparator less for signal <fifo_clk$cmp_lt0000> created at line 44.
+    Found 7-bit up counter for signal <fifo_count>.
+    Found 7-bit up counter for signal <led_count>.
+    Found 3-bit register for signal <next_st>.
+    Found 13-bit comparator greater for signal <next_st$cmp_gt0000> created at line 118.
+    Found 1-bit register for signal <read_bit>.
+    Found 13-bit up counter for signal <reset_count>.
+    Found 7-bit comparator less for signal <tx$cmp_lt0000> created at line 93.
+    Found 7-bit comparator less for signal <tx$cmp_lt0001> created at line 99.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <LED_TX> synthesized.
+
+
+Synthesizing Unit <uart_rx>.
+    Related source file is "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/uart_rx.vhd".
+Unit <uart_rx> synthesized.
+
+
+Synthesizing Unit <clk_mult>.
+    Related source file is "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/clk_mult.vhd".
+Unit <clk_mult> synthesized.
+
+
+Synthesizing Unit <main>.
+    Related source file is "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/main.vhf".
+WARNING:Xst:653 - Signal <XLXI_3_RST_IN_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 13-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 7-bit up counter                                      : 1
+# Registers                                            : 9
+ 1-bit register                                        : 7
+ 3-bit register                                        : 2
+# Comparators                                          : 5
+ 13-bit comparator greater                             : 1
+ 4-bit comparator less                                 : 1
+ 7-bit comparator less                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/rx_fifo.ngc>.
+Loading core <rx_fifo> for timing and area information for instance <XLXI_7>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 13-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 7-bit up counter                                      : 1
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+# Comparators                                          : 5
+ 13-bit comparator greater                             : 1
+ 4-bit comparator less                                 : 1
+ 7-bit comparator less                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main> ...
+
+Optimizing unit <LED_TX> ...
+
+Optimizing unit <uart_rx> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 6.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> in Unit <XLXI_7> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1> in Unit <XLXI_7> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2> in Unit <XLXI_7> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <XLXI_7> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> in Unit <XLXI_7> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1> in Unit <XLXI_7> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2> in Unit <XLXI_7> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <XLXI_7> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 61
+ Flip-Flops                                            : 61
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 4
+
+Cell Usage :
+# BELS                             : 294
+#      GND                         : 2
+#      INV                         : 5
+#      LUT1                        : 39
+#      LUT2                        : 48
+#      LUT2_D                      : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 22
+#      LUT3_D                      : 1
+#      LUT3_L                      : 3
+#      LUT4                        : 50
+#      LUT4_D                      : 2
+#      LUT4_L                      : 5
+#      MUXCY                       : 71
+#      MUXF5                       : 1
+#      VCC                         : 2
+#      XORCY                       : 40
+# FlipFlops/Latches                : 248
+#      FD                          : 14
+#      FDC                         : 107
+#      FDCE                        : 63
+#      FDE                         : 23
+#      FDP                         : 7
+#      FDPE                        : 5
+#      FDR                         : 13
+#      FDRE                        : 13
+#      FDS                         : 3
+# RAMS                             : 2
+#      RAMB16_S1_S9                : 2
+# Shift Registers                  : 19
+#      SRL16E                      : 19
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 4
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 2
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250evq100-4 
+
+ Number of Slices:                      163  out of   2448     6%  
+ Number of Slice Flip Flops:            248  out of   4896     5%  
+ Number of 4 input LUTs:                197  out of   4896     4%  
+    Number used as logic:               178
+    Number used as Shift registers:      19
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of     66     6%  
+ Number of BRAMs:                         2  out of     12    16%  
+ Number of GCLKs:                         5  out of     24    20%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)   | Load  |
+-----------------------------------+-------------------------+-------+
+XLXI_8/fifo_clk1                   | BUFG                    | 92    |
+XLXN_701                           | BUFG                    | 99    |
+clk                                | XLXI_3/DCM_SP_INST:CLKFX| 37    |
+XLXI_1/baud1                       | BUFG                    | 43    |
+-----------------------------------+-------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                               | Buffer(FF name)                                                                                                 | Load  |
+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------+
+XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<0>(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0:Q)| NONE(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_0)| 56    |
+XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<1>(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_1:Q)| NONE(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_0)| 51    |
+XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg<1>(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_1:Q)| NONE(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/count_0)                   | 36    |
+XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg<2>(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_2:Q)| NONE(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i)        | 32    |
+XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_comb1:O)  | NONE(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg_0)                                      | 3     |
+XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_comb1:O)  | NONE(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_reg_0)                                      | 2     |
+XLXI_8/fifo_reset(XLXI_8/fifo_reset:Q)                                                                                                       | NONE(XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg)                                      | 2     |
+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 19.020ns (Maximum Frequency: 52.576MHz)
+   Minimum input arrival time before clock: 1.946ns
+   Maximum output required time after clock: 4.310ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_8/fifo_clk1'
+  Clock period: 4.872ns (frequency: 205.255MHz)
+  Total number of paths / destination ports: 436 / 138
+-------------------------------------------------------------------------
+Delay:               4.872ns (Levels of Logic = 3)
+  Source:            XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_10 (FF)
+  Destination:       XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_2 (FF)
+  Source Clock:      XLXI_8/fifo_clk1 rising
+  Destination Clock: XLXI_8/fifo_clk1 rising
+
+  Data Path: XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_10 to XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.591   0.706  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_10 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_q<2><10>)
+     LUT4:I0->O            6   0.704   0.704  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/Mxor_wr_pntr_bin_xor0002_Result1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_xor0002)
+     LUT3:I2->O            2   0.704   0.451  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/Mxor_wr_pntr_bin_xor0004_Result1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_xor0004)
+     LUT4:I3->O            1   0.704   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/Mxor_wr_pntr_bin_xor0008_Result1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_xor0008)
+     FDC:D                     0.308          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_2
+    ----------------------------------------
+    Total                      4.872ns (3.011ns logic, 1.861ns route)
+                                       (61.8% logic, 38.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXN_701'
+  Clock period: 4.865ns (frequency: 205.550MHz)
+  Total number of paths / destination ports: 383 / 142
+-------------------------------------------------------------------------
+Delay:               4.865ns (Levels of Logic = 3)
+  Source:            XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_11 (FF)
+  Destination:       XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_6 (FF)
+  Source Clock:      XLXN_701 rising
+  Destination Clock: XLXN_701 rising
+
+  Data Path: XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_11 to XLXI_7/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.591   0.595  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_11 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_q<2><11>)
+     LUT4:I0->O            5   0.704   0.637  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_xor00021 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_xor0002)
+     LUT4_D:I3->O          4   0.704   0.622  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_xor000611 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_xor0006_bdd0)
+     LUT3:I2->O            1   0.704   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_xor00071 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_xor0007)
+     FDC:D                     0.308          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_6
+    ----------------------------------------
+    Total                      4.865ns (3.011ns logic, 1.854ns route)
+                                       (61.9% logic, 38.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 19.020ns (frequency: 52.576MHz)
+  Total number of paths / destination ports: 476 / 77
+-------------------------------------------------------------------------
+Delay:               6.340ns (Levels of Logic = 8)
+  Source:            XLXI_8/reset_count_0 (FF)
+  Destination:       XLXI_8/reset_count_12 (FF)
+  Source Clock:      clk rising 3.0X
+  Destination Clock: clk rising 3.0X
+
+  Data Path: XLXI_8/reset_count_0 to XLXI_8/reset_count_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.591   0.622  XLXI_8/reset_count_0 (XLXI_8/reset_count_0)
+     LUT3:I0->O            1   0.704   0.000  XLXI_8/Mcompar_next_st_cmp_gt0000_lut<0> (XLXI_8/Mcompar_next_st_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_8/Mcompar_next_st_cmp_gt0000_cy<0> (XLXI_8/Mcompar_next_st_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_8/Mcompar_next_st_cmp_gt0000_cy<1> (XLXI_8/Mcompar_next_st_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_8/Mcompar_next_st_cmp_gt0000_cy<2> (XLXI_8/Mcompar_next_st_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_8/Mcompar_next_st_cmp_gt0000_cy<3> (XLXI_8/Mcompar_next_st_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_8/Mcompar_next_st_cmp_gt0000_cy<4> (XLXI_8/Mcompar_next_st_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           4   0.459   0.666  XLXI_8/Mcompar_next_st_cmp_gt0000_cy<5> (XLXI_8/Mcompar_next_st_cmp_gt0000_cy<5>)
+     LUT2:I1->O           13   0.704   0.983  XLXI_8/reset_count_and00001 (XLXI_8/reset_count_and0000)
+     FDRE:R                    0.911          XLXI_8/reset_count_0
+    ----------------------------------------
+    Total                      6.340ns (4.069ns logic, 2.271ns route)
+                                       (64.2% logic, 35.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_1/baud1'
+  Clock period: 5.169ns (frequency: 193.461MHz)
+  Total number of paths / destination ports: 47 / 42
+-------------------------------------------------------------------------
+Delay:               5.169ns (Levels of Logic = 1)
+  Source:            XLXI_2/edge_srl (FF)
+  Destination:       XLXI_2/valid_reg (FF)
+  Source Clock:      XLXI_1/baud1 rising
+  Destination Clock: XLXI_1/baud1 rising
+
+  Data Path: XLXI_2/edge_srl to XLXI_2/valid_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16E:CLK->Q         2   3.706   0.451  XLXI_2/edge_srl (XLXI_2/edge_delay)
+     LUT4:I3->O            1   0.704   0.000  XLXI_2/valid_lut (XLXI_2/decode_valid_char)
+     FDE:D                     0.308          XLXI_2/valid_reg
+    ----------------------------------------
+    Total                      5.169ns (4.718ns logic, 0.451ns route)
+                                       (91.3% logic, 8.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_1/baud1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            rx (PAD)
+  Destination:       XLXI_2/sync_reg (FF)
+  Destination Clock: XLXI_1/baud1 rising
+
+  Data Path: rx to XLXI_2/sync_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  rx_IBUF (rx_IBUF)
+     FD:D                      0.308          XLXI_2/sync_reg
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            XLXI_8/led_out (FF)
+  Destination:       c8 (PAD)
+  Source Clock:      clk rising 3.0X
+
+  Data Path: XLXI_8/led_out to c8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              2   0.591   0.447  XLXI_8/led_out (XLXI_8/led_out)
+     OBUF:I->O                 3.272          c8_OBUF (c8)
+    ----------------------------------------
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.78 secs
+ 
+--> 
+
+Total memory usage is 158768 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

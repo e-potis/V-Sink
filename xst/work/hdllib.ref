@@ -1,0 +1,20 @@
+EN tx_2811 NULL "D:/Georges stuff/Dropbox/Johnny5/papillio2811/tx_2811.vhd" sub00/vhpl08 1364141810
+AR led_tx behavioral "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/LED_TX.vhd" sub00/vhpl15 1364751974
+AR word_con behavioral "D:/Georges stuff/Dropbox/Johnny5/papillio2811/WORD_CON.vhd" sub00/vhpl07 1364141809
+AR tx_2811 behavioral "D:/Georges stuff/Dropbox/Johnny5/papillio2811/tx_2811.vhd" sub00/vhpl09 1364141811
+EN test_leds NULL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/test_leds.vhd" sub00/vhpl16 1364745625
+AR rx_fifo rx_fifo_a "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/ipcore_dir/rx_fifo.vhd" sub00/vhpl13 1364751972
+EN word_con NULL "D:/Georges stuff/Dropbox/Johnny5/papillio2811/WORD_CON.vhd" sub00/vhpl06 1364141808
+EN clk_mult NULL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/clk_mult.vhd" sub00/vhpl04 1364751969
+AR baud_gen behavioral "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/baud_gen.vhd" sub00/vhpl01 1364751966
+AR main behavioral "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/main.vhf" sub00/vhpl11 1364751976
+EN main NULL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/main.vhf" sub00/vhpl10 1364751975
+EN clk_100 NULL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/clk_100.vhd" sub00/vhpl18 1364745627
+EN led_tx NULL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/LED_TX.vhd" sub00/vhpl14 1364751973
+AR uart_rx low_level_definition "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/uart_rx.vhd" sub00/vhpl03 1364751968
+AR clk_100 behavioral "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/clk_100.vhd" sub00/vhpl19 1364745628
+AR clk_mult behavioral "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/clk_mult.vhd" sub00/vhpl05 1364751970
+AR test_leds behavioral "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/test_leds.vhd" sub00/vhpl17 1364745626
+EN rx_fifo NULL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/ipcore_dir/rx_fifo.vhd" sub00/vhpl12 1364751971
+EN uart_rx NULL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/uart_rx.vhd" sub00/vhpl02 1364751967
+EN baud_gen NULL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/baud_gen.vhd" sub00/vhpl00 1364751965

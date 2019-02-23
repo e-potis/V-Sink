@@ -1,0 +1,175 @@
+
+****** PlanAhead v14.3 (64-bit)
+  **** Build 209282 by xbuild on Thu Oct 18 20:50:53 MDT 2012
+    ** Copyright 1986-1999, 2001-2012 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in 12 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.3/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.3/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.3/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/Project/dvi_tx/pa.fromNetlist.tcl
+# create_project -name dvi_tx -dir "C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/Project/dvi_tx/planAhead_run_2" -part xc6slx45csg324-3
+create_project: Time (s): elapsed = 00:00:34 . Memory (MB): peak = 364.031 ; gain = 60.117
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/Project/dvi_tx/dvi_demo.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/Project/dvi_tx} {../../ipcore_dir} }
+# set_property target_constrs_file "C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/dvi_demo.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/dvi_demo.ucf' to fileset 'constrs_1'
+# add_files [list {C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/dvi_demo.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx45csg324-3
+Release 14.3 - ngc2edif P.40xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design dvi_demo.ngc ...
+WARNING:NetListWriters:298 - No output is written to dvi_demo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   test_video/hdcolorbar_1/Hregion[16]_GND_32_o_select_180_OUT[5 : 2] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[0].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[1].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[2].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[3].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[4].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[5].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[6].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[7].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[8].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[9].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[10].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[11].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[12].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[13].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[14].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[15].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[16].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[17].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[18].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[19].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[20].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[21].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[22].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[23].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[24].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[25].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[26].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[27].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[28].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[29].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[30].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   dvi_mux_0/generate_rows[31].LED_driver_i/current_symbol[25 : 0] on block
+   dvi_demo is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file dvi_demo.edif ...
+ngc2edif: Total memory usage is 108712 kilobytes
+
+Parsing EDIF File [./planAhead_run_2/dvi_tx.data/cache/dvi_demo_ngc_6b09ab87.edif]
+Finished Parsing EDIF File [./planAhead_run_2/dvi_tx.data/cache/dvi_demo_ngc_6b09ab87.edif]
+Release 14.3 - ngc2edif P.40xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design driver_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to driver_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file driver_fifo.edif ...
+ngc2edif: Total memory usage is 81960 kilobytes
+
+Reading core file 'C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/ipcore_dir/driver_fifo.ngc' for (cell view 'driver_fifo', library 'dvi_demo_lib', file 'dvi_demo.ngc')
+Parsing EDIF File [./planAhead_run_2/dvi_tx.data/cache/driver_fifo_ngc_4f3f1095.edif]
+Finished Parsing EDIF File [./planAhead_run_2/dvi_tx.data/cache/driver_fifo_ngc_4f3f1095.edif]
+INFO: [Netlist 29-17] Analyzing 120 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/14.3/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx45/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.3/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx45/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/14.3/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.3/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx45/csg324/Package.xml
+Loading io standards from C:/Xilinx/14.3/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.3/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.3/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+WARNING: [Constraints 18-505] Could not create 'SLEW' constraint because cell 'dvi_tx1/TMDS2' is not directly connected to top level port. 'SLEW' is ignored by planAhead but preserved for implementation tool [C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/Project/dvi_tx/dvi_demo.ngc:28549]
+WARNING: [Constraints 18-505] Could not create 'SLEW' constraint because cell 'dvi_tx1/TMDS1' is not directly connected to top level port. 'SLEW' is ignored by planAhead but preserved for implementation tool [C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/Project/dvi_tx/dvi_demo.ngc:28557]
+WARNING: [Constraints 18-505] Could not create 'SLEW' constraint because cell 'dvi_tx1/TMDS0' is not directly connected to top level port. 'SLEW' is ignored by planAhead but preserved for implementation tool [C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/Project/dvi_tx/dvi_demo.ngc:28565]
+WARNING: [Constraints 18-505] Could not create 'SLEW' constraint because cell 'dvi_tx1/TMDS3' is not directly connected to top level port. 'SLEW' is ignored by planAhead but preserved for implementation tool [C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/Project/dvi_tx/dvi_demo.ngc:28573]
+Parsing UCF File [C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/dvi_demo.ucf]
+Finished Parsing UCF File [C:/Users/Stacey/Dropbox/work/george/dvi_tx_0.06/dvi_demo.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 120 instances were transformed.
+  RAM16X1D => RAM16X1D (RAMD32, RAMD32, GND): 120 instances
+
+Phase 0 | Netlist Checksum: 50487416
+link_design: Time (s): elapsed = 00:05:59 . Memory (MB): peak = 512.551 ; gain = 148.520
+exit
+INFO: [Common 17-206] Exiting PlanAhead at Tue Apr 09 14:54:34 2013...
+INFO: [Common 17-83] Releasing license: PlanAhead

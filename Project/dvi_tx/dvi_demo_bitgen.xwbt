@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Stacey\Dropbox\work\george\dvi_tx_0.09\Project\dvi_tx\dvi_demo.ncd
+OUTFILE=C:\Users\Stacey\Dropbox\work\george\dvi_tx_0.09\Project\dvi_tx\dvi_demo.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=C:\Users\Stacey\Dropbox\work\george\dvi_tx_0.09\Project\dvi_tx
+LICENSE=WebPack
+USER_INFO=200509741_0_0_407

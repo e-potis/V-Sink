@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.1
+# Build 179419 by xbuild on Thu Apr 26 11:41:35 MDT 2012
+# Start of session at: Sun Mar 31 16:57:28 2013
+# Process ID: 2300
+# Log file: C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/planAhead_run_1/planAhead.log
+# Journal file: C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/pa.fromNetlist.tcl}
+exit

@@ -1,0 +1,7 @@
+[Inputs]
+clk
+strobe
+=inpt[24575:0]=
+[Outputs]
+tx
+[BiDir]

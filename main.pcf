@@ -1,0 +1,12 @@
+//! **************************************************************************
+// Written by: Map P.15xf on Sun Mar 31 18:46:22 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "A0" LOCATE = SITE "P18" LEVEL 1;
+COMP "c8" LOCATE = SITE "P5" LEVEL 1;
+COMP "rx" LOCATE = SITE "P88" LEVEL 1;
+COMP "clk" LOCATE = SITE "P89" LEVEL 1;
+NET "XLXI_3/CLKIN_IBUFG" PERIOD = 31.25 ns HIGH 50%;
+SCHEMATIC END;
+

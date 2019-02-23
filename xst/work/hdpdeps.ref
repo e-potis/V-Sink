@@ -1,0 +1,87 @@
+V3 58
+FL "C:/Documents and Settings/Owner/Desktop/papillio2811/baud_gen.vhd" 2013/03/23.20:44:23 P.15xf
+FL "C:/Documents and Settings/Owner/Desktop/papillio2811/clk_mult.vhd" 2013/03/23.20:43:58 P.15xf
+FL "C:/Documents and Settings/Owner/Desktop/papillio2811/main.vhf" 2013/03/23.20:43:57 P.15xf
+FL "C:/Documents and Settings/Owner/Desktop/papillio2811/tx_2811.vhd" 2013/03/23.20:42:27 P.15xf
+FL "C:/Documents and Settings/Owner/Desktop/papillio2811/uart_rx.vhd" 2011/12/12.20:07:36 P.15xf
+FL "C:/Documents and Settings/Owner/Desktop/papillio2811/WORD_CON.vhd" 2013/03/23.20:29:41 P.15xf
+FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/baud_gen.vhd" 2013/03/31.15:50:57 P.15xf
+EN work/baud_gen 1364751965 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/baud_gen.vhd" \
+      PB ieee/std_logic_1164 1335251622
+AR work/baud_gen/Behavioral 1364751966 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/baud_gen.vhd" \
+      EN work/baud_gen 1364751965
+FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/clk_100.vhd" 2013/03/31.16:57:08 P.15xf
+EN work/clk_100 1364745627 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/clk_100.vhd" \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 LB UNISIM \
+      PH unisim/VCOMPONENTS 1335251629
+AR work/clk_100/BEHAVIORAL 1364745628 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/clk_100.vhd" \
+      EN work/clk_100 1364745627 CP BUFG CP IBUFG CP DCM_SP
+FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/clk_mult.vhd" 2013/03/31.18:46:02 P.15xf
+EN work/clk_mult 1364751969 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/clk_mult.vhd" \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 LB UNISIM \
+      PH unisim/VCOMPONENTS 1335251629
+AR work/clk_mult/BEHAVIORAL 1364751970 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/clk_mult.vhd" \
+      EN work/clk_mult 1364751969 CP BUFG CP IBUFG CP DCM_SP
+FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/ipcore_dir/rx_fifo.vhd" 2013/03/30.15:45:22 P.15xf
+EN work/rx_fifo 1364751971 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/ipcore_dir/rx_fifo.vhd" \
+      PB ieee/std_logic_1164 1335251622
+AR work/rx_fifo/rx_fifo_a 1364751972 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/ipcore_dir/rx_fifo.vhd" \
+      EN work/rx_fifo 1364751971
+FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/LED_TX.vhd" 2013/03/31.18:45:54 P.15xf
+EN work/LED_TX 1364751973 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/LED_TX.vhd" \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627
+AR work/LED_TX/Behavioral 1364751974 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/LED_TX.vhd" \
+      EN work/LED_TX 1364751973
+FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/main.vhf" 2013/03/31.18:46:01 P.15xf
+EN work/main 1364751975 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/main.vhf" \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 LB UNISIM \
+      PH unisim/VCOMPONENTS 1335251629
+AR work/main/BEHAVIORAL 1364751976 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/main.vhf" \
+      EN work/main 1364751975 CP baud_gen CP uart_rx CP clk_mult CP VCC CP rx_fifo \
+      CP LED_TX
+FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/test_leds.vhd" 2013/03/25.15:41:38 P.15xf
+EN work/test_leds 1364745625 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/test_leds.vhd" \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627
+AR work/test_leds/Behavioral 1364745626 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/test_leds.vhd" \
+      EN work/test_leds 1364745625
+FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/uart_rx.vhd" 2011/12/12.21:07:36 P.15xf
+EN work/uart_rx 1364751967 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/uart_rx.vhd" \
+      PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
+      PB ieee/STD_LOGIC_UNSIGNED 1335251625 LB UNISIM PH unisim/VCOMPONENTS 1335251629
+AR work/uart_rx/low_level_definition 1364751968 \
+      FL "C:/Documents and Settings/Owner/My Documents/Dropbox/Johnny5/papillio2812/uart_rx.vhd" \
+      EN work/uart_rx 1364751967 CP FD CP string CP label CP SRL16E CP FDE CP LUT4 \
+      CP LUT3 CP LUT2
+FL "D:/Georges stuff/Dropbox/Johnny5/papillio2811/baud_gen.vhd" 2013/03/23.20:44:23 P.15xf
+FL "D:/Georges stuff/Dropbox/Johnny5/papillio2811/clk_mult.vhd" 2013/03/23.20:43:58 P.15xf
+FL "D:/Georges stuff/Dropbox/Johnny5/papillio2811/main.vhf" 2013/03/23.20:43:57 P.15xf
+FL "D:/Georges stuff/Dropbox/Johnny5/papillio2811/tx_2811.vhd" 2013/03/24.16:16:36 P.15xf
+EN work/tx_2811 1364141810 \
+      FL "D:/Georges stuff/Dropbox/Johnny5/papillio2811/tx_2811.vhd" \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627
+AR work/tx_2811/Behavioral 1364141811 \
+      FL "D:/Georges stuff/Dropbox/Johnny5/papillio2811/tx_2811.vhd" \
+      EN work/tx_2811 1364141810
+FL "D:/Georges stuff/Dropbox/Johnny5/papillio2811/uart_rx.vhd" 2011/12/12.20:07:36 P.15xf
+FL "D:/Georges stuff/Dropbox/Johnny5/papillio2811/WORD_CON.vhd" 2013/03/23.20:29:41 P.15xf
+EN work/WORD_CON 1364141808 \
+      FL "D:/Georges stuff/Dropbox/Johnny5/papillio2811/WORD_CON.vhd" \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627
+AR work/WORD_CON/Behavioral 1364141809 \
+      FL "D:/Georges stuff/Dropbox/Johnny5/papillio2811/WORD_CON.vhd" \
+      EN work/WORD_CON 1364141808

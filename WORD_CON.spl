@@ -1,0 +1,8 @@
+[Inputs]
+strobe_in
+clk
+=serin[7:0]=
+[Outputs]
+strobe_out
+=A[24575:0]=
+[BiDir]

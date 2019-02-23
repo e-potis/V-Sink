@@ -1,0 +1,6 @@
+vhdl work "uart_rx.vhd"
+vhdl work "LED_TX.vhd"
+vhdl work "ipcore_dir/rx_fifo.vhd"
+vhdl work "clk_mult.vhd"
+vhdl work "baud_gen.vhd"
+vhdl work "main.vhf"
